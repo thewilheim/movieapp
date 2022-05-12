@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.470d8528.css",
-    "main.js": "/static/js/main.48f72576.js",
-    "static/media/dog-picture.jpg": "/static/media/dog-picture.1244f4e70e12a2baf166.jpg",
-    "static/media/tmvm-logo.png": "/static/media/tmvm-logo.605a0f92257bef9a4320.png",
-    "static/media/movie-poster.jpg": "/static/media/movie-poster.003e848b71c16ef94496.jpg",
-    "index.html": "/index.html",
-    "main.470d8528.css.map": "/static/css/main.470d8528.css.map",
-    "main.48f72576.js.map": "/static/js/main.48f72576.js.map"
+    "main.css": "/movieapp/static/css/main.6a5c82b0.css",
+    "main.js": "/movieapp/static/js/main.28504cb9.js",
+    "static/media/dog-picture.jpg": "/movieapp/static/media/dog-picture.1244f4e70e12a2baf166.jpg",
+    "static/media/tmvm-logo.png": "/movieapp/static/media/tmvm-logo.605a0f92257bef9a4320.png",
+    "static/media/movie-poster.jpg": "/movieapp/static/media/movie-poster.003e848b71c16ef94496.jpg",
+    "index.html": "/movieapp/index.html",
+    "main.6a5c82b0.css.map": "/movieapp/static/css/main.6a5c82b0.css.map",
+    "main.28504cb9.js.map": "/movieapp/static/js/main.28504cb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.470d8528.css",
-    "static/js/main.48f72576.js"
+    "static/css/main.6a5c82b0.css",
+    "static/js/main.28504cb9.js"
   ]
 }
