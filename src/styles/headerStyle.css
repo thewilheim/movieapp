@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: var(--white);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul > li {
+  margin-right: 3rem;
+  font-size: 1.3rem;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+
+.navLeft > ul {
+  display: flex;
+}
+
+.navRight {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.navRight > img {
+  margin-left: 3rem;
+  width: 34px;
+}

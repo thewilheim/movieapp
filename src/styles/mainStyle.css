@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  /* Colour Variables */
+  --black: #131111;
+  --white: #f5f5f1;
+  --offWhite: #c2c2c2a9;
+  --lightRed: #e50914;
+  --darkRed: #b81d24;
+  --green: #00d66b;
+}
+
+body {
+  background-color: var(--black);
+  padding: 4rem 4rem 0rem 4rem;
+}
+
+#root {
+  padding: 1em;
+}
+
+/* .container {
+} */
+
+/* Splash CSS */
+.splashImage {
+  position: absolute;
+  margin: 0;
+  padding: 0%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 60rem;
+  width: 100%;
+  background-image: linear-gradient(0deg, var(--black) 5%, rgba(129, 33, 30, 0.13) 100%),
+    url(../images/dog-picture.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100% 100%; /* Resize the background image to cover the entire container */
+
+  z-index: -1;
+}
+
+.splashTitle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--white);
+  margin-top: 10%;
+}
+
+.splashInfo > h1 {
+  font-size: 5rem;
+  margin-left: 0%;
+  padding-left: 0%;
+  width: 50%;
+}
+
+.splashInfo > img {
+  width: 500px;
+}
+
+.splashDetails {
+    margin-bottom: 2rem;
+}
+
+.splashDetails > span {
+  font-size: 1.3rem;
+  padding-right: 1rem;
+}
+
+.splashDetails>span:first-child {
+  color: rgba(255, 255, 255, 0.521);
+}
+
+.splashDetails>span:nth-child(2) {
+  color: var(--green);
+}
+
+.splashDetails>span:last-child {
+  font-style: bold;
+}
+
+.splashBtn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#playBtn {
+  width: 12rem;
+  padding: .8rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  color: var(--white);
+  background-color: var(--darkRed);
+  border: none;
+  transition: .5s;
+}
+
+#playBtn:hover {
+  background-color: rgba(63, 63, 63, 0.534);
+  backdrop-filter: blur(10px);
+}
+
+#addToWatch {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 2rem;
+  background-color: #221f1f00;
+  border: 2px solid var(--darkRed);
+  color: var(--white);
+  font-size: 2.5rem;
+  transition: .7s ease-in-out;
+}
+#addToWatch:hover {
+  transform: rotate(360deg);
+  background-color: var(--green);
+    border: 2px solid var(--green);
+
+}
+
+
+main {
+    margin-bottom: 8rem;
+}
+
+/* Content Container */
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+.category > h1 {
+  color: #f5f5f1;
+  margin-bottom: .5rem;
+}
+
+
+/* Card Container */
+.cardContainer {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  overflow-x: scroll;
+
+}
+
+.category > ::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+.category > ::-webkit-scrollbar-track {
+  background: var(--offWhite);
+    border-radius: 5px;
+}
+
+/* Handle */
+ .category > ::-webkit-scrollbar-thumb {
+  background: var(--lightRed);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+ .category > ::-webkit-scrollbar-thumb:hover {
+  background: var(--darkRed);
+}

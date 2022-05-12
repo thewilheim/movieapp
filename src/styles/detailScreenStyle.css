@@ -1,0 +1,57 @@
+.detailContainer {
+    color: var(--white);
+}
+
+h3 > a  {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.detialsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60rem;
+}
+
+.detailsHeader {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.detailsHeader > img {
+    width: 250px;
+    border-radius: .5rem;
+    opacity: .85;
+    margin-top: 1.8rem;
+}
+
+.movieDetails {
+    margin-left: 4rem;
+}
+
+.movieDetails > h1 {
+    font-size: 6rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.movieDetails>p {
+    font-size: 1.3rem;
+    max-width: 55rem;
+    line-height: 2rem;
+}
+
+.castDetails {
+    color: var(--offWhite);
+}
+.castName {
+display: grid;
+grid-template-columns: auto auto auto;
+margin-top: 2rem;
+width: 60rem;
+}
+.castName > h4 {
+    padding: 0rem 2rem 2rem 0rem;
+}
