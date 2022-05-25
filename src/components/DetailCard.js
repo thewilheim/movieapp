@@ -6,7 +6,7 @@ function DetailCard(props) {
   return (
     <div className="detailContainer">
       <h3>
-        <Link to="/">Back To Dashboard</Link>
+        <Link to="/movieapp/">Back To Dashboard</Link>
       </h3>
       <div className="detialsContent">
         <div className="detailsHeader">

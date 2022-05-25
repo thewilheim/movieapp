@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Main from "./components/Main";
 import DetailScreen from "./components/DetailScreen";
 import "./styles/mainStyle.css";
 import config from "./config";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   // Get API Token
@@ -28,11 +34,11 @@ function App() {
           `https://api.themoviedb.org/3/configuration?api_key=${API_TOKEN}`
         ),
       ])
-        .then(async ([movieData, configData]) => {
+        .then(async ([movieData, configData, genre]) => {
           const a = await movieData.json();
           const b = await configData.json();
           setFetchData({
-            movieData: a,
+            movieData: a.results,
             isLoading: false,
             configData: b,
           });
@@ -46,26 +52,27 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(fetchData.movieData);
-
   return (
     <div className="container">
       {fetchData.isLoading ? (
         <h1>LOADING</h1>
       ) : (
         <Router>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Main
-                  movieData={fetchData.movieData}
-                  configData={fetchData.configData}
-                />
-              }
-            />
-            <Route path="/details" element={<DetailScreen />} />
-          </Routes>
+          <AnimatePresence exitBeforeEnter>
+            <Routes>
+              <Route
+                path="/movieapp/"
+                element={
+                  <Main
+                    movieData={fetchData.movieData}
+                    configData={fetchData.configData}
+                    genre={fetchData.genre}
+                  />
+                }
+              />
+              <Route path="/details" element={<DetailScreen />} />
+            </Routes>
+          </AnimatePresence>
         </Router>
       )}
     </div>

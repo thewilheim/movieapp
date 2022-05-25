@@ -6,11 +6,11 @@ import Recommneded from "./Recommneded";
 function Main(props) {
   const { movieData, configData } = props;
   return (
-    <div>
+    <div className="contentContainer">
       <Header />
       <SplashScreen />
       <Recommneded
-        name={"My List"}
+        name={"Popular"}
         movieData={movieData}
         configData={configData}
       />

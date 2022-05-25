@@ -2,10 +2,24 @@ import React from "react";
 import searchLogo from "../images/search-logo.png";
 import accountLogo from "../images/accountBox.png";
 import "../styles/headerStyle.css";
+import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <header>
+    <motion.header
+      initial={{
+        y: "-50vh",
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        y: { type: "spring", stiffness: 80, damping: 15 },
+        duration: 2,
+      }}
+    >
       <nav>
         <div className="navLeft">
           <ul>
@@ -21,7 +35,7 @@ function Header() {
           <img src={accountLogo} alt="" />
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

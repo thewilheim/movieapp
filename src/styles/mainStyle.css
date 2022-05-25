@@ -24,6 +24,10 @@ body {
 } */
 
 /* Splash CSS */
+
+main {
+  overflow: hidden;
+}
 .splashImage {
   position: absolute;
   margin: 0;
@@ -34,11 +38,9 @@ body {
   height: 60rem;
   width: 100%;
   background-image: linear-gradient(0deg, var(--black) 5%, rgba(129, 33, 30, 0.13) 100%),
-    url(../images/dog-picture.jpg);
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: 100% 100%; /* Resize the background image to cover the entire container */
-
+    url(../images/Blade-runner.jpg);
+  background-position: center center;
+  background-size: cover;
   z-index: -1;
 }
 
@@ -48,14 +50,14 @@ body {
   align-items: flex-start;
   flex-direction: column;
   color: var(--white);
-  margin-top: 10%;
+  margin-top: 15rem;
 }
 
 .splashInfo > h1 {
   font-size: 5rem;
   margin-left: 0%;
   padding-left: 0%;
-  width: 50%;
+  margin-bottom: 3rem;
 }
 
 .splashInfo > img {
@@ -129,9 +131,14 @@ main {
 }
 
 /* Content Container */
+
+.contentContainer {
+  overflow-y: hidden;
+}
 .category {
   display: flex;
   flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .category > h1 {
