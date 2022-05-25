@@ -1,14 +1,48 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function DetailCard(props) {
   const { movieData, getImagePath, cast } = props;
   return (
     <div className="detailContainer">
-      <h3>
+      <motion.h3
+        initial={{
+          y: "-50rem",
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          y: { type: "spring", stiffness: 80, damping: 15 },
+          duration: 3,
+        }}
+        exit={{
+          opacity: 0,
+        }}
+      >
         <Link to="/movieapp/">Back To Dashboard</Link>
-      </h3>
-      <div className="detialsContent">
+      </motion.h3>
+      <motion.div
+        className="detialsContent"
+        initial={{
+          x: "-50rem",
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{
+          x: { type: "spring", stiffness: 80, damping: 15 },
+          duration: 3,
+        }}
+        exit={{
+          opacity: 0,
+        }}
+      >
         <div className="detailsHeader">
           <img src={getImagePath()} alt="" />
           <div className="movieDetails">
@@ -35,7 +69,7 @@ function DetailCard(props) {
         <div className="rateDetails">
           <h3>RATINGS</h3>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Main from "./components/Main";
 import DetailScreen from "./components/DetailScreen";
 import "./styles/mainStyle.css";
@@ -57,8 +52,8 @@ function App() {
       {fetchData.isLoading ? (
         <h1>LOADING</h1>
       ) : (
-        <Router>
-          <AnimatePresence exitBeforeEnter>
+        <BrowserRouter>
+          <AnimatePresence>
             <Routes>
               <Route
                 path="/movieapp/"
@@ -66,56 +61,16 @@ function App() {
                   <Main
                     movieData={fetchData.movieData}
                     configData={fetchData.configData}
-                    genre={fetchData.genre}
                   />
                 }
               />
               <Route path="/details" element={<DetailScreen />} />
             </Routes>
           </AnimatePresence>
-        </Router>
+        </BrowserRouter>
       )}
     </div>
   );
 }
 
 export default App;
-
-// Config API request
-//const [configData, setConfigData] = useState();
-// const fetchConfig = async () => {
-//   // Preforms a API request and fetches data
-//   const data = await fetch(
-//     "https://api.themoviedb.org/3/configuration?api_key=9fd90fba4c58b92212c5f4cd69742fc2"
-//   );
-
-//   // Converts the data into json
-//   const json = await data.json();
-
-//   // Updates the state with the returned data
-//   setConfigData(json);
-// };
-
-// // Callback to the function
-// fetchConfig();
-// console.log(configData);
-
-// const fetchData = async () => {
-//   // Preforms a API request and fetches data
-//   const data = await fetch(
-//     "https://api.themoviedb.org/3/movie/latest?api_key=9fd90fba4c58b92212c5f4cd69742fc2&language=en-US"
-//   );
-
-//   // Converts the data into json
-//   const json = await data.json();
-
-//   // Updates the state with the returned data
-//   setMovieData({
-//     movieData: json,
-//     isLoading: false,
-//     urlPath: "",
-//   });
-// };
-
-// // Callback to the function
-// fetchData();

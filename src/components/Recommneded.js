@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import { motion } from "framer-motion";
 
 function Recommneded(props) {
-  const { movieData, configData, name, genre } = props;
+  const { movieData, configData, name } = props;
 
   return (
     <motion.div

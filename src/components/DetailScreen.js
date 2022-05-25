@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/detailScreenStyle.css";
-import image from "../images/movie-poster.jpg";
 import config from "../config";
 import DetailCard from "./DetailCard";
 
