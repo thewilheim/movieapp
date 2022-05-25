@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/movieapp/static/css/main.6a5c82b0.css",
-    "main.js": "/movieapp/static/js/main.28504cb9.js",
-    "static/media/dog-picture.jpg": "/movieapp/static/media/dog-picture.1244f4e70e12a2baf166.jpg",
+    "main.css": "/movieapp/static/css/main.5fc5baa2.css",
+    "main.js": "/movieapp/static/js/main.df271104.js",
+    "static/media/Blade-runner.jpg": "/movieapp/static/media/Blade-runner.02f3dfde90c8e5124bf2.jpg",
     "static/media/tmvm-logo.png": "/movieapp/static/media/tmvm-logo.605a0f92257bef9a4320.png",
-    "static/media/movie-poster.jpg": "/movieapp/static/media/movie-poster.003e848b71c16ef94496.jpg",
     "index.html": "/movieapp/index.html",
-    "main.6a5c82b0.css.map": "/movieapp/static/css/main.6a5c82b0.css.map",
-    "main.28504cb9.js.map": "/movieapp/static/js/main.28504cb9.js.map"
+    "main.5fc5baa2.css.map": "/movieapp/static/css/main.5fc5baa2.css.map",
+    "main.df271104.js.map": "/movieapp/static/js/main.df271104.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a5c82b0.css",
-    "static/js/main.28504cb9.js"
+    "static/css/main.5fc5baa2.css",
+    "static/js/main.df271104.js"
   ]
 }
